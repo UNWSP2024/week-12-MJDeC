@@ -28,7 +28,7 @@ class MPG:
     def mpg_calc(self):
       gas_gallons_val=self.gas_gallons.get()
       miles_val=self.miles.get()
-      final_calc=(gas_gallons_val/miles_val)
-      tkinter.messagebox.show("MPG",f"The vehicle gets {final_calc} miles per gallon of gas.")
+      final_calc=(miles_val/gas_gallons_val)
+      tkinter.messagebox.showinfo("MPG",f"The vehicle gets {final_calc} miles per gallon of gas.")
 
 mpg=MPG()
