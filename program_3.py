@@ -1,4 +1,4 @@
-import tkinter
+import tkinter as tk
 import tkinter.messagebox
 
 #create "Rates" class
