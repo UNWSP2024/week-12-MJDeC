@@ -1,5 +1,6 @@
 import tkinter as Tk
 import tkinter.messagebox
+
 #Create "Auto" Class
 class Auto:
   def __init__(self):
@@ -31,7 +32,6 @@ class Auto:
     self.check7.pack()
 
     def total():
-      cost=0
       if check1.get==1:
         cost=cost+30.00
       if check2.get==1:
