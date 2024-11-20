@@ -1,4 +1,4 @@
-import tkinter
+import tkinter as Tk
 import tkinter.messagebox
 
 #create "MPG" class
