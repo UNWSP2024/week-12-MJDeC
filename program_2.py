@@ -1,4 +1,4 @@
-import tkinter
+import tkinter as Tk
 import tkinter.messagebox
 
 #Create "Auto" Class
@@ -8,7 +8,7 @@ class Auto:
     self.main_window.title("Joe's Automotive Options")
     
     check1=tk.IntVar
-    check2=tk.IntVar
+    check2=k.IntVar
     check3=tk.IntVar
     check4=tk.IntVar
     check5=tk.IntVar
