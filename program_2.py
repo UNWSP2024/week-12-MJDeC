@@ -45,6 +45,7 @@ class Auto:
     self.check5=tkinter.Checkbutton(self.main_window,text="Inspection-$35.00",onvalue=1,offvalue=0) 
     self.check5.pack()
     self.check6=tkinter.Checkbutton(self.main_window,text="Muffler Replacement-$200.00",onvalue=1,offvalue=0)
+    self.check6.pack()
     self.check7=tkinter.Checkbutton(self.main_window,text="Tire Rotation-$20.00",onvalue=1,offvalue=0)
     self.check7.pack()
 
