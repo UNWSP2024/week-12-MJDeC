@@ -2,6 +2,7 @@ import tkinter as tk
 import tkinter.messagebox
 #Create "Auto" Class
 class Auto:
+  cost=0
   def __init__(self):
     self.main_window=tkinter.Tk()
     self.main_window.title("Joe's Automotive Options")
