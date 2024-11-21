@@ -8,7 +8,7 @@ class Rates:
     self.main_window.title("Long-Distance Call Rates")
 
     self.radio_var=tkinter.IntVar()
-    #self.radio_var.set(1)
+    self.radio_var.set(1)
     
     #create radiobuttons
     self.radio1=tkinter.Radiobutton(self.main_window,text="Daytime (6:00 A.M. through 5:59 P.M.) = $0.02 per minute",variable=self.radio_var)
@@ -27,7 +27,6 @@ class Rates:
     self.calc.pack()
     
     #def charge(self):
-      
         #tkinter.messagebox.showinfo("Charge","Your charge is"
     
     tkinter.mainloop()
