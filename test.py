@@ -35,6 +35,8 @@ class Rates:
     #create calculate button
     self.calc=tkinter.Button(self.main_window,text="Calculate",command=charge)
     self.calc.pack()
+    self.quit_button=tkinter.Button(self.main_window,text="Quit",command=self.main_window.destroy)
+    self.quit_button.pack()
     
     tkinter.mainloop()
 
