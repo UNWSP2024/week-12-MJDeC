@@ -30,6 +30,8 @@ class Auto:
     self.check6.pack()
     self.check7=tkinter.Checkbutton(self.main_window,text="Tire Rotation-$20.00",onvalue=1,offvalue=0)
     self.check7.pack()
+    self.quit_button=tkinter.Button(self.main_window,text="Quit",command=self.main_window.destroy)
+    self.quit_button.pack()
     
     def total():
       if check1.get==1:
