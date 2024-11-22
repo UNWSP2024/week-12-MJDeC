@@ -8,7 +8,7 @@ class Rates:
     self.main_window.title("Long-Distance Call Rates")
 
     #select one radiobutton
-    self.radio_var=tkinter.IntVar()
+    self.radio_var=tk.StringVar()
     self.radio_var.set(1)
 
     #enter amount of minutes you want to talk for
@@ -18,15 +18,16 @@ class Rates:
     self.entry_box.pack()
     
     #create radiobuttons
-    self.radio1=tkinter.Radiobutton(self.main_window,text="Daytime (6:00 A.M. through 5:59 P.M.) = $0.02 per minute",variable=self.radio_var,value=".02")
-    self.radio2=tkinter.Radiobutton(self.main_window,text="Evening (6:00 P.M.  through 11:59 P.M.) = $0.12 per minute",variable=self.radio_var,value=".12")
-    self.radio3=tkinter.Radiobutton(self.main_window,text="Off-Peak (Midnight through 5:59 A.M.) = $0.05 per minute",variable=self.radio_var,value=".05")
+    self.radio1=tkinter.Radiobutton(self.main_window,text="Daytime (6:00 A.M. through 5:59 P.M.) = $0.02 per minute",variable=radio_var,value=.02)
+    self.radio2=tkinter.Radiobutton(self.main_window,text="Evening (6:00 P.M.  through 11:59 P.M.) = $0.12 per minute",variable=radio_var,value=.12)
+    self.radio3=tkinter.Radiobutton(self.main_window,text="Off-Peak (Midnight through 5:59 A.M.) = $0.05 per minute",variable=radio_var,value=.05)
     self.radio1.pack()
     self.radio2.pack()
     self.radio3.pack()
 
     def charge():
-      selected=float(radio_var.get())
+      selected=radio_var.get()
+      print(selected)
       mins=float(self.entry_box.get())
       if selected:
         total=(selected)*(mins)
