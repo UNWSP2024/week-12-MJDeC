@@ -27,7 +27,8 @@ class MPG:
         #create calculate button
         self.calculate_button=tkinter.Button(self.main_window,text="Calculate MPG",command=self.mpg_calc)
         self.calculate_button.pack()
-
+        self.quit_button=tkinter.Button(self.main_window,text="Quit",command=self.main_window.destroy)
+        self.quit_button.pack()
         tkinter.mainloop()
         
     #function that calculates mpg
