@@ -1,45 +1,39 @@
 import tkinter as tk
 import tkinter.messagebox
 
-#create "Rates" class
-class Rates:
-  def __init__(self):
-    self.main_window=tkinter.Tk()
-    self.main_window.title("Long-Distance Call Rates")
+def calculate():
+  value = float(entry.get())
+  if radio_var.get() == 1:
+    result = value * 2
+  elif radio_var.get() == 2:
+    result = value * 3
+  else:
+    result = value
 
-    #select one radiobutton
-    self.radio_var=tk.StringVar()
-    self.radio_var.set(1)
+result_label.config(text=f"Result: {result}")
 
-    #enter amount of minutes you want to talk for
-    self.min_num=tkinter.Label(self.main_window,text="Enter the number of minutes you would like to speak for:")
-    self.min_num.pack()
-    self.entry_box=tkinter.Entry(self.main_window)
-    self.entry_box.pack()
+window = tk.Tk()
+window.title("Multiplier")
+
+entry = tk.Entry(window)
+entry.pack()
+
+radio_var = tk.IntVar()
+radio_var.set(1)
     
-    #create radiobuttons
-    self.radio1=tkinter.Radiobutton(self.main_window,text="Daytime (6:00 A.M. through 5:59 P.M.) = $0.02 per minute",variable=radio_var,value=.02)
-    self.radio2=tkinter.Radiobutton(self.main_window,text="Evening (6:00 P.M.  through 11:59 P.M.) = $0.12 per minute",variable=radio_var,value=.12)
-    self.radio3=tkinter.Radiobutton(self.main_window,text="Off-Peak (Midnight through 5:59 A.M.) = $0.05 per minute",variable=radio_var,value=.05)
-    self.radio1.pack()
-    self.radio2.pack()
-    self.radio3.pack()
-
-    def charge():
-      selected=radio_var.get()
-      print(selected)
-      mins=float(self.entry_box.get())
-      if selected:
-        total=(selected)*(mins)
-        tkinter.messagebox.showinfo("Charge",f"Your charge is ${total:.2f}")
+#create radiobuttons
+self.radio1=tkinter.Radiobutton(window,text="Daytime (6:00 A.M. through 5:59 P.M.) = $0.02 per minute",variable=radio_var,value=.02)
+self.radio2=tkinter.Radiobutton(window,text="Evening (6:00 P.M.  through 11:59 P.M.) = $0.12 per minute",variable=radio_var,value=.12)
+self.radio3=tkinter.Radiobutton(window,text="Off-Peak (Midnight through 5:59 A.M.) = $0.05 per minute",variable=radio_var,value=.05)
+self.radio1.pack()
+self.radio2.pack()
+self.radio3.pack()
   
-    #create calculate button
-    self.calc=tkinter.Button(self.main_window,text="Calculate",command=charge)
-    self.calc.pack()
-    self.quit_button=tkinter.Button(self.main_window,text="Quit",command=self.main_window.destroy)
-    self.quit_button.pack()
+#create calculate button
+self.calc=tkinter.Button(window,text="Calculate",command=calculate)
+self.calc.pack()
+self.quit_button=tkinter.Button(window,text="Quit",command=self.window.destroy)
+self.quit_button.pack()
     
-    tkinter.mainloop()
-
-
-rates=Rates()
+window.mainloop()
+calculate()
