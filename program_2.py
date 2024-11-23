@@ -6,7 +6,7 @@ class Auto:
     self.main_window=tkinter.Tk()
     self.main_window.title("Joe's Automotive Options")
     
-    check1=tk.IntVar
+    check1=tk.IntVar()
     check2=tk.IntVar
     check3=tk.IntVar
     check4=tk.IntVar
@@ -15,8 +15,8 @@ class Auto:
     check7=tk.IntVar
     
     #Create checkbuttons
-    self.check1=tkinter.Checkbutton(self.main_window,text="Oil Change-$30.00",onvalue=1,offvalue=0)
-    self.check1.pack()
+    self.oil=tkinter.Checkbutton(self.main_window,text="Oil Change-$30.00",onvalue=1,offvalue=0, variable=check1)
+    self.oil.pack()
     self.check2=tkinter.Checkbutton(self.main_window,text="Lube Job-$20.00",onvalue=1,offvalue=0)
     self.check2.pack()
     self.check3=tkinter.Checkbutton(self.main_window,text="Radiator Flush-$40.00",onvalue=1,offvalue=0)
@@ -31,8 +31,8 @@ class Auto:
     self.check7.pack()
     
     def total():
-      cost=0
-      if check1.get==1:
+      cost = 0
+      if self.check1.get()==1:
         cost=cost+30.00
       if check2.get==1:
         cost=cost+20.00
