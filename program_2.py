@@ -2,7 +2,6 @@ import tkinter as tk
 import tkinter.messagebox
 #Create "Auto" Class
 class Auto:
-  cost=0
   def __init__(self):
     self.main_window=tkinter.Tk()
     self.main_window.title("Joe's Automotive Options")
@@ -30,10 +29,9 @@ class Auto:
     self.check6.pack()
     self.check7=tkinter.Checkbutton(self.main_window,text="Tire Rotation-$20.00",onvalue=1,offvalue=0)
     self.check7.pack()
-    self.quit_button=tkinter.Button(self.main_window,text="Quit",command=self.main_window.destroy)
-    self.quit_button.pack()
     
     def total():
+      cost=0
       if check1.get==1:
         cost=cost+30.00
       if check2.get==1:
@@ -48,11 +46,13 @@ class Auto:
         cost=cost+200.00
       if check7.get==1:
         cost=cost+20.00
-      tkinter.messagebox.showinfo("Total",f"Your total cost is ${cost}")
+      tkinter.messagebox.showinfo("Total",f"Your total cost is ${cost:.2f}")
 
     #create total button
     self.total_button=tkinter.Button(self.main_window,text="Total Cost",command=total)
     self.total_button.pack()
+    self.quit_button=tkinter.Button(self.main_window,text="Quit",command=self.main_window.destroy)
+    self.quit_button.pack()
       
     tkinter.mainloop()
                                                                          
