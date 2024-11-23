@@ -8,7 +8,7 @@ class Rates:
     self.main_window.title("Long-Distance Call Rates")
 
     #select one radiobutton
-    self.radio_var=tkinter.IntVar()
+    self.radio_var=tkinter.StringVar()
     self.radio_var.set(1)
 
     #enter amount of minutes you want to talk for
@@ -25,7 +25,7 @@ class Rates:
     self.radio2.pack()
     self.radio3.pack()
 
-    def charge(self):
+    def charge():
       number=float(self.entry_box.get())
       multiplier=float(self.radio_var.get())
       result=number*multiplier
