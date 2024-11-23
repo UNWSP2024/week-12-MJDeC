@@ -9,7 +9,7 @@ class Rates:
 
     #select one radiobutton
     self.radio_var=tkinter.StringVar()
-    self.radio_var.set(1)
+    self.radio_var = tk.StringVar(value=".02")
 
     #enter amount of minutes you want to talk for
     self.min_num=tkinter.Label(self.main_window,text="Enter the number of minutes you would like to speak for:")
