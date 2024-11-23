@@ -32,19 +32,19 @@ class Auto:
     
     def total():
       cost=0
-      if self.check1.get()==1:
+      if check1.get()==1:
         cost=cost+30.00
-      if self.check2.get()==1:
+      if check2.get()==1:
         cost=cost+20.00
-      if self.check3.get()==1:
+      if check3.get()==1:
         cost=cost+40.00
-      if self.check4.get()==1:
+      if check4.get()==1:
         cost=cost+100.00
-      if self.check5.get()==1:
+      if check5.get()==1:
         cost=cost+35.00
-      if self.check6.get()==1:
+      if check6.get()==1:
         cost=cost+200.00
-      if self.check7.get()==1:
+      if check7.get()==1:
         cost=cost+20.00
       tkinter.messagebox.showinfo("Total",f"Your total cost is ${cost:.2f}")
 
