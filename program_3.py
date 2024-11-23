@@ -25,18 +25,15 @@ class Rates:
     self.radio2.pack()
     self.radio3.pack()
 
-    def charge():
-      selected=float(radio_var.get())
-      mins=float(self.entry_box.get())
-      if selected:
-        total=(selected)*(mins)
-        tkinter.messagebox.showinfo("Charge",f"Your charge is ${total:.2f}")
+    def charge(self):
+      number=float(self.entry_box.get())
+      multiplier=float(self.radio_var.get())
+      result=number*multiplier
+      tkinter.messagebox.showinfo("Charge",f"Your charge is ${result:.2f}")
   
     #create calculate button
     self.calc=tkinter.Button(self.main_window,text="Calculate",command=charge)
     self.calc.pack()
     
     tkinter.mainloop()
-
-
 rates=Rates()
